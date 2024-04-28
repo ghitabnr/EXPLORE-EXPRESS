@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation confirmée</title>
+    <!-- CSS Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="mb-4">Reservation saved</h1>
+    <p>Merci pour votre réservation!</p>
+
+    <!-- Afficher les détails de la réservation -->
+    <div class="card mt-4">
+        <div class="card-body">
+            <h2 class="card-title">Détails de la réservation</h2>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Nom : <span th:text="${reservation.name}"></span></li>
+                <li class="list-group-item">Email : <span th:text="${reservation.email}"></span></li>
+                <li class="list-group-item">Téléphone : <span th:text="${reservation.phone}"></span></li>
+                <li class="list-group-item">Chambres : <span th:text="${reservation.rooms}"></span></li>
+                <li class="list-group-item">Check-in : <span th:text="${reservation.checkIn}"></span></li>
+                <li class="list-group-item">Check-out : <span th:text="${reservation.checkOut}"></span></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Ajoutez d'autres détails de la réservation si nécessaire -->
+
+    <p class="mt-4">Nous sommes impatients de vous accueillir! on va vous founir de la disponibilité de la chambre via votre email</p>
+</div>
+
+<!-- JavaScript Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
